@@ -14,11 +14,20 @@ end
 
 
 describe Car do
-    before { @car = Car.new }
+    before do
+        ActiveRecord::Base.establish_connection(adapter:"sqlite3", database:"problem2.sqlite3")
+        CreateTables.new.migrate :change
+
+        @car = Car.new
+    end
 
     subject { @car }
 
     it { should respond_to(:components) }
+
+    after do
+        File.delete("problem2.sqlite3")
+    end
 end
 
 describe CarSimulationController do
