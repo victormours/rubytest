@@ -1,5 +1,5 @@
 
-#Issues with the original code:
+#Main issues with the original code:
 
 #The original code is vulnerable to SQL injection because it builds a SQL query from unvalidated user input.
 #Using a query with question marks is safer thanks to Rails' built-in filter for special SQL characters.
@@ -7,12 +7,14 @@
 #The original controller contains logic that has nothing to do with the response.
 #Such business logic should be handled by the model ("Fat Model, Skinny Controller").
 
+#Components apparently have an attribute named "type", which is a reserved name.
+#I renamed it "componenttype".
+
+#Minor Issues
+
 #The original method does not take into account the possibility that one or many wheels may already be broken,
 #or assumes that a wheel can be broken multiple times. Depending on the domain, this assumption may make sense
 #but I assumed that we are only interested in breaking functioning wheels
-
-#Components apparently have an attribute named "type", which is a reserved name.
-#I renamed it "componenttype".
 
 #We should use floor instead of round to randomly pick a wheel.
 
