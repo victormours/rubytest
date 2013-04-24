@@ -1,4 +1,3 @@
-
 #Main issues with the original code:
 
 #The original code is vulnerable to SQL injection because it builds a SQL query from unvalidated user input.

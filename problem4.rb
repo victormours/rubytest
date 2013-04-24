@@ -4,7 +4,7 @@
 #but that we want an easy and more elegant way of deciding which is the best type of food.
 
 #The heavy-handed way of implementing strategy would be with a FeedStrategy and three subclasses, maybe an abstract factory.
-#But let's keep it simple: giving each pet a favorite food
+#But let's keep it simple: giving each pet a favorite food is probably the easiest solution.
 
 class Pet
     def feed(food)
