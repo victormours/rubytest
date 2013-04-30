@@ -14,4 +14,8 @@ describe Problem1 do
         Problem1.something_unusual([1, 2, 3]).should == "[1, 2, 3]"
     end
 
+    it "should work for a hash" do
+        Problem1.something_unusual({"do" => "C", "re" => "D", "mi" => "E"}).should == "[[\"do\", \"C\"], [\"re\", \"D\"], [\"mi\", \"E\"]]"
+    end
+
 end
